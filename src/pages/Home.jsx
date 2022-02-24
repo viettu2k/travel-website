@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Header heading={state.heading} paragraph={state.paragraph}>
-        <button>Get Started</button>
+        <button className="btn-default">Get Started</button>
       </Header>
     </>
   );

@@ -14,3 +14,20 @@
     justify-content: $align-items;
     height: $height;
 }
+
+@mixin button( $color1, $color2, $textColor, $height, $fontSize, $bdr, $paddingVertical, $paddingHorizontal) {
+    background: linear-gradient(to right, $color1, $color2);
+    color: $textColor;
+    text-decoration: none;
+    height: $height;
+    line-height: $height;
+    display: inline-block;
+    font-size: $fontSize;
+    font-weight: 400;
+    border-radius: $bdr;
+    padding: $paddingVertical $paddingHorizontal;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
