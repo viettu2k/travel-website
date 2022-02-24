@@ -31,3 +31,17 @@
     cursor: pointer;
     text-transform: uppercase;
 }
+
+@mixin animation($name, $duration, $timeFunction, $translate1, $translate2) {
+    animation: $name $duration $timeFunction;
+    @keyframes #{$name} {
+        0% {
+            opacity: 0;
+            transform: translateY($translate1);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY($translate2);
+        }
+    }
+}
