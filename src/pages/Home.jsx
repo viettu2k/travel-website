@@ -4,7 +4,7 @@ import Model from "../components/Model";
 import ModelContext from "../context/ModelContext";
 
 export default function Home() {
-  const { state: ss, dispatch } = useContext(ModelContext);
+  const { state: ss, dispatch, openModel } = useContext(ModelContext);
   console.log("Home page: ", ss);
 
   const [state] = useState({
@@ -15,7 +15,9 @@ export default function Home() {
   return (
     <>
       <Header heading={state.heading} paragraph={state.paragraph}>
-        <button className="btn-default">Get Started</button>
+        <button onClick={openModel} className="btn-default">
+          Get Started
+        </button>
       </Header>
       <Model />
     </>
