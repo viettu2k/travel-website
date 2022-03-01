@@ -6,7 +6,6 @@ import NotFound from "./pages/NotFound";
 import ModelContext from "./context/ModelContext";
 import Model from "./components/Model";
 
-console.log(ModelContext);
 function App() {
   const [state, dispatch] = useState({ modelStatus: false });
   return (
