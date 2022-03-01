@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <ModelContext.Provider value={{state, dispatch}} />
+        <ModelContext.Provider value={{ state, dispatch }}>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route component={NotFound} />
