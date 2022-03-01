@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
+import Model from "../components/Model";
 
 export default function Home() {
   const [state] = useState({
@@ -12,6 +13,7 @@ export default function Home() {
       <Header heading={state.heading} paragraph={state.paragraph}>
         <button className="btn-default">Get Started</button>
       </Header>
+      <Model />
     </>
   );
 }
