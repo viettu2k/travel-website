@@ -13,15 +13,19 @@ function App() {
     dispatch({ modelStatus: true });
   };
 
+  const closeModel = () => {
+    dispatch({ modelStatus: false });
+  };
+
   return (
     <Router>
-      <Switch>
-        <ModelContext.Provider value={{ state, dispatch, openModel }}>
+      <ModelContext.Provider value={{ state, dispatch, openModel, closeModel }}>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route component={NotFound} />
-        </ModelContext.Provider>
-      </Switch>
+        </Switch>
+      </ModelContext.Provider>
     </Router>
   );
 }

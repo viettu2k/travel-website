@@ -2,10 +2,16 @@ import React, { useContext } from "react";
 import ModelContext from "../context/ModelContext";
 
 const Model = () => {
-  const { state, dispatch } = useContext(ModelContext);
+  const { state, dispatch, closeModel } = useContext(ModelContext);
+
+  const close = (e) => {
+    if (e.target.getAttribute("class") === "model") {
+      closeModel();
+    }
+  };
 
   return state.modelStatus ? (
-    <div className="model">
+    <div className="model" onClick={close}>
       <div className="model__body">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
         est. Nesciunt eos corrupti unde possimus ipsa, neque tenetur eius iusto
