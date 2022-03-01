@@ -1,11 +1,10 @@
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
+@use "../abstracts";
 .model {
-    @include mixins.position(fixed, 0, 0, 0, 0, 100%, 100%);
+    @include abstracts.position(fixed, 0, 0, 0, 0, 100%, 100%);
     background: rgba(0, 0, 0, 0.4);
-    @include mixins.align(flex, center, center, null);
+    @include abstracts.align(flex, center, center, null);
     &__body {
-        background: variables.$white;
+        background: abstracts.$white;
         width: 38rem;
         height: auto;
         padding: 2rem;
