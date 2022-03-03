@@ -4,8 +4,7 @@ import Model from "../components/Model";
 import ModelContext from "../context/ModelContext";
 
 export default function Home() {
-  const { state: ss, dispatch, openModel } = useContext(ModelContext);
-  console.log("Home page: ", ss);
+  const { dispatch } = useContext(ModelContext);
 
   const [state] = useState({
     heading: "We are travel friends",
@@ -15,7 +14,10 @@ export default function Home() {
   return (
     <>
       <Header heading={state.heading} paragraph={state.paragraph}>
-        <button onClick={openModel} className="btn-default">
+        <button
+          onClick={() => dispatch({ type: "OPEN_MODEL" })}
+          className="btn-default"
+        >
           Get Started
         </button>
       </Header>

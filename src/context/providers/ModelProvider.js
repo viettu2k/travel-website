@@ -1,24 +1,12 @@
-import React, { useState, useReducer } from "react";
+import React, { useReducer } from "react";
 import ModelContext from "../ModelContext";
+import ModelReducer from "../reducers/ModelReducer";
 
 const ModelProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(
-    (state, action) => {
-      return state;
-    },
-    { modelStatus: false }
-  );
-
-  const openModel = () => {
-    dispatch({ modelStatus: true });
-  };
-
-  const closeModel = () => {
-    dispatch({ modelStatus: false });
-  };
+  const [state, dispatch] = useReducer(ModelReducer, { modelStatus: false });
 
   return (
-    <ModelContext.Provider value={{ state, dispatch, openModel, closeModel }}>
+    <ModelContext.Provider value={{ state, dispatch }}>
       {children}
     </ModelContext.Provider>
   );
