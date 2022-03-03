@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
 import ModelContext from "../ModelContext";
 
-const ModelProvider = (props) => {
-  const [state, dispatch] = useState({ modelStatus: false });
+const ModelProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(
+    (state, action) => {
+      return state;
+    },
+    { modelStatus: false }
+  );
 
   const openModel = () => {
     dispatch({ modelStatus: true });
@@ -13,9 +18,9 @@ const ModelProvider = (props) => {
   };
 
   return (
-    <ModelContext.Provider
-      value={{ state, dispatch, openModel, closeModel }}
-    ></ModelContext.Provider>
+    <ModelContext.Provider value={{ state, dispatch, openModel, closeModel }}>
+      {children}
+    </ModelContext.Provider>
   );
 };
 
