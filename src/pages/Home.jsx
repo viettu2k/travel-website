@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Header from "../components/Header";
 import Model from "../components/Model";
 import ModelContext from "../context/ModelContext";
+import { OPEN_MODEL } from "../context/types/ModelTypes";
 
 export default function Home() {
   const { dispatch } = useContext(ModelContext);
@@ -15,7 +16,7 @@ export default function Home() {
     <>
       <Header heading={state.heading} paragraph={state.paragraph}>
         <button
-          onClick={() => dispatch({ type: "OPEN_MODEL" })}
+          onClick={() => dispatch({ type: OPEN_MODEL })}
           className="btn-default"
         >
           Get Started
