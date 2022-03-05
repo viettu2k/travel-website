@@ -30,8 +30,9 @@ const Register = () => {
           placeholder="Create password"
         />
       </div>
-      <div className="group">
+      <div className="group flex space-between y-center">
         <input type="submit" name="" className="btn-dark " value="Register" />
+        <span>Already have an account?</span>
       </div>
     </form>
   );
