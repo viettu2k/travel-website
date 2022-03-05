@@ -1,5 +1,4 @@
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
+@use "../abstracts" as *;
 .container {
     max-width: 1200px;
     margin-left: auto;
@@ -7,9 +6,28 @@
 }
 
 .btn-default {
-    @include mixins.button( variables.$main1, variables.$main2, variables.$white, 4.5rem, 1.4rem, 0.2rem, 0, 2rem);
+    @include button($main1, $main2, $white, 4.5rem, 1.4rem, 0.2rem, 0, 2rem);
 }
 
 .pr {
     position: relative;
+}
+
+.group {
+    margin-bottom: 1.3rem;
+    &__control {
+        display: block;
+        width: 100%;
+        border-radius: 0.4rem;
+        outline: none;
+        font-size: 1.6rem;
+        border: 1px solid $sliver;
+        height: 5rem;
+        padding: 0 2rem;
+    }
+}
+
+::placeholder {
+    color: $blackDark;
+    font-size: 1.7rem;
 }
