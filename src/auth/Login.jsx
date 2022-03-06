@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import ModelContext from "../context/ModelContext";
+import { OPEN_MODEL } from "../context/types/ModelTypes";
 
-const Login = () => {
+const Login = ({ currentModel }) => {
+  const { dispatch } = useContext(ModelContext);
+
   return (
     <form>
       <div className="model__heading">
@@ -24,7 +28,11 @@ const Login = () => {
       </div>
       <div className="group flex space-between y-center">
         <input type="submit" name="" className="btn-dark " value="Login" />
-        <span>Create new account?</span>
+        <span
+          onClick={() => dispatch({ type: OPEN_MODEL, payload: currentModel })}
+        >
+          Create new account?
+        </span>
       </div>
     </form>
   );

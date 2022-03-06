@@ -16,6 +16,7 @@ export default function Home() {
   });
 
   const [registerModel] = useState("registerModel");
+  const [loginModel] = useState("loginModel");
 
   return (
     <>
@@ -28,10 +29,10 @@ export default function Home() {
         </button>
       </Header>
       <Model current={registerModel}>
-        <Register />
+        <Register currentModel={loginModel} />
       </Model>
-      <Model>
-        <Login />
+      <Model current={loginModel}>
+        <Login currentModel={registerModel} />
       </Model>
     </>
   );
