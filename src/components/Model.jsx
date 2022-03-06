@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import ModelContext from "../context/ModelContext";
 import { CLOSE_MODEL } from "../context/types/ModelTypes";
 
-const Model = ({ children }) => {
+const Model = ({ children, current }) => {
   const { state, dispatch } = useContext(ModelContext);
 
   const close = (e) => {
@@ -11,7 +11,7 @@ const Model = ({ children }) => {
     }
   };
 
-  return state.modelStatus ? (
+  return state.modelStatus && state.current === current ? (
     <div className="model" onClick={close}>
       <div className="model__body">{children}</div>
     </div>

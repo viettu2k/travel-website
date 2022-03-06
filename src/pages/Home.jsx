@@ -14,17 +14,20 @@ export default function Home() {
     paragraph:
       " Come and join us we travel the most famous and beautiful places in the worlds",
   });
+
+  const [registerModel] = useState("registerModel");
+
   return (
     <>
       <Header heading={state.heading} paragraph={state.paragraph}>
         <button
-          onClick={() => dispatch({ type: OPEN_MODEL })}
+          onClick={() => dispatch({ type: OPEN_MODEL, payload: registerModel })}
           className="btn-default"
         >
           Get Started
         </button>
       </Header>
-      <Model>
+      <Model current={registerModel}>
         <Register />
       </Model>
       <Model>
