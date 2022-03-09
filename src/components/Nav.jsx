@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import NavContext from "../context/NavContext";
 
 const Nav = () => {
+  const { state, dispatch } = useContext(NavContext);
+
+  console.log(state);
+
   return (
     <>
-      <div className="navLayer"></div>
-      <div className="nav">
+      {state ? <div className="navLayer"></div> : ""}
+
+      <div className={state ? "nav nav--open" : "nav nav--close"}>
         <div className="nav__content">
           <li to="/">
             <Link>Home</Link>
