@@ -11,11 +11,11 @@ const Nav = () => {
 
       <div className={state ? "nav nav--open" : "nav nav--close"}>
         <div className="nav__content">
-          <li to="/">
-            <Link>Home</Link>
+          <li>
+            <Link to="/">Home</Link>
           </li>
-          <li to="/about">
-            <Link>About</Link>
+          <li>
+            <Link to="/about">About</Link>
           </li>
         </div>
       </div>
