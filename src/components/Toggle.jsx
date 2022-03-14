@@ -6,7 +6,10 @@ const Toggle = () => {
   const { state, dispatch } = useContext(NavContext);
 
   return (
-    <div className="toggle-open" onClick={() => dispatch({ type: NAV_TOGGLE })}>
+    <div
+      className={state ? "toggle-close" : "toggle-open"}
+      onClick={() => dispatch({ type: NAV_TOGGLE })}
+    >
       <span></span>
       <span></span>
       <span></span>
