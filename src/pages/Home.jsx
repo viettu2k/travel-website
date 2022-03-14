@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "../components/Header";
 import Model from "../components/Model";
 import ModelContext from "../context/ModelContext";
@@ -20,6 +21,14 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Travel Friends</title>
+        <meta
+          name="description"
+          content="Travel to the world with travel friends"
+        />
+        <meta name="keywords" content="travel, travel tours, airline" />
+      </Helmet>
       <Header heading={state.heading} paragraph={state.paragraph}>
         <button
           onClick={() => dispatch({ type: OPEN_MODEL, payload: registerModel })}
