@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import DestinationsContext from "../context/DestinationsContext";
+import DestinationsList from "./DestinationsList";
 
 function Destinations() {
   const {
@@ -21,6 +22,16 @@ function Destinations() {
           </div>
           <div className="col-6 p-15">
             <p className="destinations__paragraph">{state.paragraph}</p>
+          </div>
+        </div>
+        <div className="destinations__block">
+          <div className="row">
+            {destinations.map((destination) => (
+              <DestinationsList
+                key={destination.id}
+                destination={destination}
+              />
+            ))}
           </div>
         </div>
       </div>
