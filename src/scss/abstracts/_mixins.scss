@@ -10,8 +10,8 @@
 
 @mixin align($flex, $justify-content, $align-items, $height) {
     display: $flex;
-    align-items: $justify-content;
-    justify-content: $align-items;
+    align-items: $align-items;
+    justify-content: $justify-content;
     height: $height;
 }
 
