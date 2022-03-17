@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 .destinations {
-    margin: 5rem 0;
+    margin: 8rem 0;
     &__heading {
         font-size: 2.8rem;
         color: $black;
@@ -23,6 +23,9 @@
         line-height: 2.7rem;
         color: $sliverLight;
         font-weight: 400;
+    }
+    &__block {
+        margin-top: 6rem;
     }
     &__card {
         width: 100%;

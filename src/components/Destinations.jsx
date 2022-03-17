@@ -16,7 +16,7 @@ function Destinations() {
   return (
     <div className="destinations">
       <div className="container">
-        <div className="row">
+        <div className="row ml-minus-15 mr-minus-15">
           <div className="col-6 p-15">
             <h3 className="destinations__heading">{state.heading}</h3>
           </div>
@@ -25,7 +25,7 @@ function Destinations() {
           </div>
         </div>
         <div className="destinations__block">
-          <div className="row">
+          <div className="row ml-minus-15 mr-minus-15">
             {destinations.map((destination) => (
               <DestinationsList
                 key={destination.id}
