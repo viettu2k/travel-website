@@ -12,7 +12,6 @@ const Register = ({ currentModel }) => {
 
   const registerForm = (e) => {
     e.preventDefault();
-    console.log(state);
   };
 
   return (
