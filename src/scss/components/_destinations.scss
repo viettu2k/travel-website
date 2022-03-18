@@ -61,6 +61,7 @@
             @include position(absolute, 25%, 0, null, null, 0, 50%);
             @include align(flex, center, center, null);
             background: linear-gradient(to right, $main1, $main2);
+            visibility: hidden;
             transition: all 0.5s linear;
             &__text {
                 transform: rotate(-90deg);
@@ -69,6 +70,7 @@
         &:hover &__info {
             width: 100%;
             transform: rotate(90deg);
+            visibility: visible;
         }
     }
 }
