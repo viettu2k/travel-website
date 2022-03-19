@@ -6,6 +6,7 @@ import { destinations } from "../../data/destinations";
 const DestinationsProvider = ({ children }) => {
   const [destinationsData, dispatch] = useReducer(DestinationsReducer, {
     destinations,
+    details: {},
   });
 
   return (
