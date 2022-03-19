@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+.destinationInfo {
+    margin: 10rem 0;
+    &__p {
+        margin-bottom: 4rem;
+        font-size: 1.5rem;
+        color: $sliverDark;
+        line-height: 2.8rem;
+    }
+}
