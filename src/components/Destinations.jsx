@@ -12,6 +12,7 @@ const Destinations = () => {
     paragraph:
       "Travel is a brutality. It forces you to trust strangers and to lose sight of all that familiar comforts of home and friends.You are constantly of balance. Nothing is yours except the essential things Air, Sleep, Dream, the sea, the sky-all things tending towards the eternal or what we imagine of it.",
   });
+
   return (
     <div className="destinations">
       <div className="container">
