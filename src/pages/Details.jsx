@@ -10,7 +10,7 @@ import Cities from "../components/Cities";
 const Details = () => {
   const { destinationsData, dispatch } = useContext(DestinationsContext);
   const { id } = useParams();
-  const { details } = destinationsData;
+  const { details, filteredCities } = destinationsData;
 
   useEffect(() => {
     dispatch({ type: DETAILS, payload: id });
@@ -24,7 +24,7 @@ const Details = () => {
       </Helmet>
       <Header heading={details.name} image={details.bigImage}></Header>
       <DestinationInfo details={details} />
-      <Cities />
+      <Cities cities={filteredCities} name={details.name} />
     </>
   );
 };

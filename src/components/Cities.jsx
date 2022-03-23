@@ -1,14 +1,25 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const Cities = () => {
+const Cities = ({ cities, name }) => {
   return (
     <div className="cities">
       <div className="container">
         <div className="cities__container">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita rem
-          consequatur, cupiditate eveniet non sunt, eum modi, culpa porro
-          aperiam eos quas soluta nihil dolor praesentium in suscipit dolore
-          consectetur.
+          <h2 className="heading">cities in {name}</h2>
+          <div className="row ml-minus-15 mr-minus-15">
+            {cities.length > 0
+              ? cities.map((city) => (
+                  <div className="col-3 p-15" key={city.id}>
+                    <div className="cities__body">
+                      <div className="cities__body__image">
+                        <LazyLoadImage src={city.image} alt={city.image} />
+                      </div>
+                    </div>
+                  </div>
+                ))
+              : `No cities in ${name}`}
+          </div>
         </div>
       </div>
     </div>
