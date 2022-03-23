@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import DestinationsContext from "../context/DestinationsContext";
-import { DETAILS } from "../context/types/DestinationTypes";
+import { DETAILS, CITIES } from "../context/types/DestinationTypes";
 import Header from "../components/Header";
 import { Helmet } from "react-helmet-async";
 import DestinationInfo from "../components/DestinationInfo";
@@ -13,6 +13,7 @@ const Details = () => {
 
   useEffect(() => {
     dispatch({ type: DETAILS, payload: id });
+    dispatch({ type: CITIES, payload: id });
   }, [id]);
 
   return (
