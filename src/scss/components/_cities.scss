@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+.cities {
+    margin: 5rem 0;
+    background: $sliverLight-40;
+    padding: 13rem 0;
+    transform: skewY(-5deg);
+    &__container {
+        transform: skewY(5deg);
+    }
+}
