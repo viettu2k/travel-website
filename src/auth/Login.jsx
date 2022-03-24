@@ -12,7 +12,6 @@ const Login = ({ currentModel }) => {
 
   const loginForm = (e) => {
     e.preventDefault();
-    console.log(state);
   };
 
   return (
