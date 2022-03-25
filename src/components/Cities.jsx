@@ -14,6 +14,19 @@ const Cities = ({ cities, name }) => {
                     <div className="cities__body">
                       <div className="cities__body__image">
                         <LazyLoadImage src={city.image} alt={city.image} />
+                        <div
+                          className={
+                            city.status === "Bestselling"
+                              ? "bestselling"
+                              : city.status === "New"
+                              ? "new"
+                              : city.status === "Hot"
+                              ? "hot"
+                              : ""
+                          }
+                        >
+                          {city.status}
+                        </div>
                       </div>
                     </div>
                   </div>
