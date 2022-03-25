@@ -55,6 +55,9 @@ const Cities = ({ cities, name }) => {
                       </div>
                       <Facilities name="room" value={city.room} />
                       <Facilities name="food" value={city.food} />
+                      <div className="cities__body__contents__button">
+                        <btn className="btn-dark-sm">buy now</btn>
+                      </div>
                     </div>
                   </div>
                 ))
