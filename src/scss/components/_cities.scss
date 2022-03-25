@@ -42,5 +42,21 @@
                 @include status($main2, $white);
             }
         }
+        &__contents {
+            margin: 1.5rem 0 0.5rem 0;
+            &__top {
+                @include align(flex, space-between, center, null);
+                &__name {
+                    font-size: 1.5rem;
+                }
+                &__duration {
+                    @include align(flex, null, center, null);
+                    &__time {
+                        font-size: 1.4rem;
+                        margin-left: 0.6rem;
+                    }
+                }
+            }
+        }
     }
 }
