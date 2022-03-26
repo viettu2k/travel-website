@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "../components/Header";
 import Model from "../components/Model";
@@ -19,6 +19,10 @@ export default function Home() {
 
   const [registerModel] = useState("registerModel");
   const [loginModel] = useState("loginModel");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

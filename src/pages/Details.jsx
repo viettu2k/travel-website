@@ -16,6 +16,7 @@ const Details = () => {
     () => {
       dispatch({ type: DETAILS, payload: id });
       dispatch({ type: CITIES, payload: id });
+      window.scrollTo(0, 0);
     },
     // eslint-disable-next-line
     [id]
