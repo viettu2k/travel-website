@@ -12,10 +12,14 @@ const Details = () => {
   const { id } = useParams();
   const { details, filteredCities } = destinationsData;
 
-  useEffect(() => {
-    dispatch({ type: DETAILS, payload: id });
-    dispatch({ type: CITIES, payload: id });
-  }, [id]);
+  useEffect(
+    () => {
+      dispatch({ type: DETAILS, payload: id });
+      dispatch({ type: CITIES, payload: id });
+    },
+    // eslint-disable-next-line
+    [id]
+  );
 
   return (
     <>
