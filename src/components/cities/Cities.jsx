@@ -1,13 +1,8 @@
 import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { BsStopwatch } from "react-icons/bs";
-import Facilities from "./Facilities";
+import CityImage from "./CityImage";
+import CityContents from "./CityContents";
 
 const Cities = ({ cities, name }) => {
-  const formate = (price) => {
-    return `${price}.00`;
-  };
-
   return (
     <div className="cities">
       <div className="container">
@@ -18,46 +13,8 @@ const Cities = ({ cities, name }) => {
               ? cities.map((city) => (
                   <div className="col-3 p-15" key={city.id}>
                     <div className="cities__body">
-                      <div className="cities__body__image">
-                        <LazyLoadImage src={city.image} alt={city.image} />
-                        <div
-                          className={
-                            city.status === "Bestselling"
-                              ? "bestselling"
-                              : city.status === "New"
-                              ? "new"
-                              : city.status === "Hot"
-                              ? "hot"
-                              : ""
-                          }
-                        >
-                          {city.status}
-                        </div>
-                      </div>
-                      <div className="cities__body__contents">
-                        <div className="cities__body__contents__top">
-                          <div className="cities__body__contents__top__name">
-                            {city.name}
-                          </div>
-                          <div className="cities__body__contents__top__duration">
-                            <BsStopwatch size={18} color="#df2189" />
-                            <div className="cities__body__contents__top__duration__time">
-                              {city.duration}
-                            </div>
-                          </div>
-                        </div>
-                        <div className="cities__body__contents__price">
-                          <span className="cities__body__contents__price__dollor">
-                            $
-                          </span>
-                          {formate(city.price)}
-                        </div>
-                      </div>
-                      <Facilities name="room" value={city.room} />
-                      <Facilities name="food" value={city.food} />
-                      <div className="cities__body__contents__button">
-                        <btn className="btn-dark-sm">buy now</btn>
-                      </div>
+                      <CityImage image={city.image} status={city.status} />
+                      <CityContents city={city} />
                     </div>
                   </div>
                 ))
