@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ServicesLeft from "./ServicesLeft";
+import SharedContext from "../../context/SharedContext";
 
 const Services = () => {
+  const {
+    sharedData: { servicesData },
+  } = useContext(SharedContext);
   const [state] = useState({
     heading:
       "Why customers love travel friends? because we provide unique services.",
     subHeading:
       "Our aim is to provide professional and unique services to customers, and we have provided high quality services to our customers that why they love travel friends.",
   });
+
   return (
     <div className="services">
       <div className="services__contents">
