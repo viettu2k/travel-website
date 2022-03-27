@@ -1,4 +1,4 @@
-export const services = [{
+const services = [{
         id: 1,
         heading: "Travel guides",
         p: "In each country we have travel guides, they will help you throughout the tour and they are very friendly you can ask them any question and they will never mind.",
@@ -19,3 +19,5 @@ export const services = [{
         p: "We have good facilities for couples, in 5-star hotels, we room for couples, that's why peoples love our tours. ",
     },
 ];
+
+export default services;

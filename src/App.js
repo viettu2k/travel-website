@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import ModelProvider from "./context/providers/ModelProvider";
 import NavProvider from "./context/providers/NavProvider";
+import SharedProvider from "./context/providers/SharedProvider";
 import Nav from "./components/Nav";
 import Toggle from "./components/Toggle";
 import DestinationsProvider from "./context/providers/DestinationsProvider";
@@ -16,16 +17,18 @@ function App() {
       <ModelProvider>
         <NavProvider>
           <DestinationsProvider>
-            <Toggle />
-            <Nav />
-            <HelmetProvider>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/details/:id" component={Details} />
-                <Route component={NotFound} />
-              </Switch>
-            </HelmetProvider>
+            <SharedProvider>
+              <Toggle />
+              <Nav />
+              <HelmetProvider>
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/details/:id" component={Details} />
+                  <Route component={NotFound} />
+                </Switch>
+              </HelmetProvider>
+            </SharedProvider>
           </DestinationsProvider>
         </NavProvider>
       </ModelProvider>
