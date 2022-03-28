@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import ServicesLeft from "./ServicesLeft";
 import SharedContext from "../../context/SharedContext";
+import ServicesList from "./ServicesList";
 
 const Services = () => {
   const {
@@ -25,10 +26,7 @@ const Services = () => {
               />
             </div>
             <div className="col-6 p-15">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-              commodi quis beatae perferendis accusantium sit ullam animi
-              adipisci dicta a, reprehenderit laudantium aliquid voluptatibus,
-              deserunt quibusdam distinctio eligendi eius itaque?
+              <ServicesList services={servicesData} />
             </div>
           </div>
         </div>
