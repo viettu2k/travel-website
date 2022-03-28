@@ -24,4 +24,24 @@
             line-height: 2.7rem;
         }
     }
+    &__list {
+        margin-bottom: 0.5rem;
+        &__heading {
+            background: $white;
+            font-size: 1.6rem;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 1.5rem;
+            @include align(flex, null, center, null);
+            text-transform: capitalize;
+        }
+        &__details {
+            max-height: 0;
+            overflow: hidden;
+            font-size: 1.5rem;
+            padding-left: 3.5rem;
+            padding-right: 3.5rem;
+            line-height: 2.3rem;
+        }
+    }
 }
