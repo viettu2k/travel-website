@@ -11,10 +11,20 @@ const ServicesList = ({ services }) => {
     ? services.map((service, index) => (
         <div className="services__list" key={index}>
           <h4
-            className="services__list__heading"
+            className={`services__list__heading ${
+              current === index
+                ? "services__list__heading--active"
+                : "services__list__heading--normal"
+            }`}
             onClick={() => showDetails(index)}
           >
-            <BiChevronRight size={25} />
+            <BiChevronRight
+              size={25}
+              className={`${
+                current === index ? "services__rotate" : "services__back"
+              }`}
+              color={`${current === index ? "ff4d58" : "back"}`}
+            />
             {service.heading}
           </h4>
           <p
