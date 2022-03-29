@@ -6,6 +6,9 @@
     transform: skewY(-5deg);
     &__contents {
         transform: skewY(5deg);
+        &__container {
+            @include align(flex, null, center, null);
+        }
     }
     &__left {
         margin-right: 10rem;
