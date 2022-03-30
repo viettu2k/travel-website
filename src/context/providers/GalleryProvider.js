@@ -6,6 +6,7 @@ import gallery from "../../data/gallery";
 const NavProvider = ({ children }) => {
   const [galleryStore, dispatch] = useReducer(GalleryReducer, {
     gallery,
+    lightBoxStatus: false,
   });
 
   return (

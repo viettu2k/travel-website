@@ -15,4 +15,33 @@
             }
         }
     }
+    &__lightbox {
+        @include position(fixed, 0, 0, 0, 0, 100%, 100%);
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 8;
+        @include align(flex, center, center, null);
+        flex-direction: column;
+        h4 {
+            color: $white;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        &__card {
+            width: 45rem;
+            height: 45rem;
+            background: transparent;
+            border-radius: 0.3rem;
+            overflow: hidden;
+            &__image {
+                width: 45rem;
+                max-height: 45rem;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }
