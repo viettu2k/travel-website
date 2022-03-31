@@ -10,6 +10,7 @@ import Destinations from "../components/Destinations";
 import Services from "../components/services/Services";
 import Reviews from "../components/reviews/Reviews";
 import Gallery from "../components/gallery/Gallery";
+import Footer from "../components/footer/Footer";
 
 export default function Home() {
   const { dispatch } = useContext(ModelContext);
@@ -55,6 +56,7 @@ export default function Home() {
       <Services />
       <Reviews />
       <Gallery />
+      <Footer />
     </>
   );
 }
