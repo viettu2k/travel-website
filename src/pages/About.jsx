@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import PageContainer from "../components/PageContainer";
+import PageContainer from "../components/pages-parts/PageContainer";
 import Footer from "../components/footer/Footer";
+import AboutImage from "../components/pages-parts/AboutImage";
 
 export default function About() {
   const [state] = useState({
@@ -16,7 +17,9 @@ export default function About() {
         <title>About page</title>
         <meta name="description" content="travel friends about page" />
       </Helmet>
-      <PageContainer data={state} />
+      <PageContainer data={state}>
+        <AboutImage />
+      </PageContainer>
       <Footer />
     </>
   );
