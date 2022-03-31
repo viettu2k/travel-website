@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import PageContainer from "../components/PageContainer";
+import Footer from "../components/footer/Footer";
 
 export default function About() {
   const [state] = useState({
@@ -16,6 +17,7 @@ export default function About() {
         <meta name="description" content="travel friends about page" />
       </Helmet>
       <PageContainer data={state} />
+      <Footer />
     </>
   );
 }
