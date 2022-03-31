@@ -9,6 +9,7 @@ const ReviewBody = ({ review }) => {
       if (i <= number) {
         container.push(
           <BsFillStarFill
+            key={i}
             size={13}
             color="#df2189"
             className="reviews__body__contents__info__rating__icon"
@@ -17,6 +18,7 @@ const ReviewBody = ({ review }) => {
       } else {
         container.push(
           <BsStar
+            key={i}
             size={13}
             color="#df2189"
             className="reviews__body__contents__info__rating__icon"
