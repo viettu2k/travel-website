@@ -11,6 +11,7 @@ import Nav from "./components/Nav";
 import Toggle from "./components/Toggle";
 import DestinationsProvider from "./context/providers/DestinationsProvider";
 import Details from "./pages/Details";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                   <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
+                    <Route exact path="/contact" component={Contact} />
                     <Route exact path="/details/:id" component={Details} />
                     <Route component={NotFound} />
                   </Switch>
