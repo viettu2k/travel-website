@@ -1,4 +1,5 @@
 import React from "react";
+import FooterIntro from "./FooterIntro";
 
 const Footer = () => {
   const footerStyles = {
@@ -14,7 +15,9 @@ const Footer = () => {
         <div className="container">
           <div className="footer__container__block">
             <div className="row ml-minus-15 mr-minus-15">
-              <div className="col-6 p-15"></div>
+              <div className="col-6 p-15">
+                <FooterIntro />
+              </div>
               <div className="col-6 p-15"></div>
             </div>
           </div>
