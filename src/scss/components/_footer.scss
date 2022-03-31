@@ -29,4 +29,28 @@
             line-height: 2.5rem;
         }
     }
+    &__heading {
+        color: $black;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+        margin-bottom: 2rem;
+    }
+    &__ul {
+        list-style: none;
+        &__li {
+            display: flex;
+            align-items: center;
+            color: $sliverLight;
+            a {
+                text-decoration: none;
+                color: $sliverLight;
+                display: block;
+                padding: 0.5rem 0;
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                margin-left: 1.5rem;
+            }
+        }
+    }
 }
