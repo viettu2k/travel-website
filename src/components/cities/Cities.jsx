@@ -7,7 +7,7 @@ const Cities = ({ cities, name }) => {
     <div className="cities">
       <div className="container">
         <div className="cities__container">
-          <h2 className="heading">cities in {name}</h2>
+          <h2 className="heading headingAnimation">cities in {name}</h2>
           <div className="row ml-minus-15 mr-minus-15">
             {cities.length > 0
               ? cities.map((city) => (
