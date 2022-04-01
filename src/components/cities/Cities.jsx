@@ -12,7 +12,7 @@ const Cities = ({ cities, name }) => {
             {cities.length > 0
               ? cities.map((city) => (
                   <div className="col-3 p-15" key={city.id}>
-                    <div className="cities__body">
+                    <div className="cities__body animation">
                       <CityImage image={city.image} status={city.status} />
                       <CityContents city={city} />
                     </div>

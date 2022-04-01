@@ -6,7 +6,7 @@ import ModelContext from "../context/ModelContext";
 import { OPEN_MODEL } from "../context/types/ModelTypes";
 import Register from "../auth/Register";
 import Login from "../auth/Login";
-import Destinations from "../components/Destinations";
+import Destinations from "../components/destinations/Destinations";
 import Services from "../components/services/Services";
 import Reviews from "../components/reviews/Reviews";
 import Gallery from "../components/gallery/Gallery";

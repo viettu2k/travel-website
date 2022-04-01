@@ -4,7 +4,7 @@ import DestinationsContext from "../context/DestinationsContext";
 import { DETAILS, CITIES } from "../context/types/DestinationTypes";
 import Header from "../components/Header";
 import { Helmet } from "react-helmet-async";
-import DestinationInfo from "../components/DestinationInfo";
+import DestinationInfo from "../components/destinations/DestinationInfo";
 import Cities from "../components/cities/Cities";
 
 const Details = () => {

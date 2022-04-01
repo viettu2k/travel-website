@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import DestinationsContext from "../context/DestinationsContext";
+import DestinationsContext from "../../context/DestinationsContext";
 import DestinationsList from "./DestinationsList";
 const Destinations = () => {
   const {

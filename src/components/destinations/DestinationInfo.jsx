@@ -3,7 +3,7 @@ import DestinationDetails from "./DestinationDetails";
 
 const DestinationInfo = ({ details }) => {
   return (
-    <div className="destinationInfo">
+    <div className="destinationInfo animation">
       <div className="container">
         <h2 className="heading">Overview</h2>
         <div className="row">
