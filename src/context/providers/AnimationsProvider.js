@@ -8,9 +8,9 @@ const AnimationsProvider = ({ children }) => {
       const elementPosition = element.getBoundingClientRect().top;
       const viewPortHeight = window.innerHeight - 150;
       if (elementPosition < viewPortHeight) {
-        element.classList.add("animation");
+        element.classList.add("animate");
       } else {
-        element.classList.remove("animation");
+        element.classList.remove("animate");
       }
     });
   };
