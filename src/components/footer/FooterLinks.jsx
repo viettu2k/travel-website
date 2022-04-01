@@ -27,7 +27,7 @@ const FooterLinks = () => {
   const { headings, pages, partners } = state;
 
   return (
-    <div className="row">
+    <div className="row animation">
       <div className="col-4 p-15">
         <h3 className="footer__heading">{headings.pages}</h3>
         <ShowFooterLinks links={pages} />
