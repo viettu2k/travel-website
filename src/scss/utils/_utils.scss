@@ -74,9 +74,9 @@
 }
 
 .animation {
-    transform: translateY(10rem) scale(0);
+    transform: translateY(-10rem) scale(0);
     opacity: 0;
-    transition: all 0.8s ease-in;
+    transition: all 0.8s ease-out;
 }
 
 .animate {
@@ -85,9 +85,9 @@
 }
 
 .headingAnimation {
-    transform: translateY(10rem) scale(0) rotate(-2deg);
+    transform: translateY(-10rem) scale(0) rotate(-2deg);
     opacity: 0;
-    transition: all 0.8s ease-in;
+    transition: all 0.8s ease-out;
 }
 
 .headingAnimate {
