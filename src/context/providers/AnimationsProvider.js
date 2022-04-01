@@ -5,7 +5,13 @@ const AnimationsProvider = ({ children }) => {
   const scrollAnimations = () => {
     const elements = document.querySelectorAll(".animation");
     elements.forEach((element) => {
-      console.log(element);
+      const elementPosition = element.getBoundingClientRect();
+      const viewPortHeight = window.innerHeight - 100;
+      if (elementPosition < viewPortHeight) {
+        element.classList.add("animate");
+      } else {
+        element.classList.remove("animate");
+      }
     });
   };
 
