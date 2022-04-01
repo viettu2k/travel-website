@@ -73,6 +73,13 @@
     text-transform: capitalize;
 }
 
-.animate {
-    color: red !important;
+.animation {
+    transform: translateY(10rem);
+    opacity: 0;
+    transition: all 1s linear;
+}
+
+.animation {
+    transform: translateY(0);
+    opacity: 1;
 }
