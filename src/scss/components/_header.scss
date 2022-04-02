@@ -51,12 +51,26 @@
                     font-size: 4.2rem;
                     line-height: 3rem;
                     @include animation(heading, 1s, ease-in, -8rem, 0);
+                    @include responsive(medium) {
+                        font-size: 4rem;
+                    }
+                    @include responsive(small) {
+                        font-size: 3rem;
+                    }
+                    @include responsive(xsmall) {
+                        font-size: 2rem;
+                    }
                 }
                 &__p {
                     margin-top: 1rem;
                     color: $white;
                     font-size: 1.5rem;
                     @include animation(subHeading, 1s, ease-out, -10rem, 0);
+                    @include responsive(small) {
+                        margin-top: 0.5rem;
+                        font-size: 1.4rem;
+                        line-height: 1.8rem;
+                    }
                 }
                 &__link {
                     margin-top: 1rem;
