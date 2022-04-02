@@ -1,4 +1,4 @@
-@use "breakpoints" as *;
+@use "./breakpoints" as *;
 @mixin position($position, $top, $left, $bottom, $right, $width, $height) {
     position: $position;
     top: $top;
