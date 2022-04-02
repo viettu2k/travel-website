@@ -83,15 +83,18 @@
         }
     }
     @if $breakpoint==medium {
-        @media (max-width: $md) {}
-        @content;
+        @media (max-width: $md) {
+            @content;
+        }
     }
     @if $breakpoint==small {
-        @media (max-width: $sm) {}
-        @content;
+        @media (max-width: $sm) {
+            @content;
+        }
     }
     @if $breakpoint==xsmall {
-        @media (max-width: $xsm) {}
-        @content;
+        @media (max-width: $xsm) {
+            @content;
+        }
     }
 }

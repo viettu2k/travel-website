@@ -7,11 +7,29 @@
     &__logo {
         @include position(absolute, 3rem, 0, null, null, null, null);
         z-index: 1;
+        @include responsive(large) {
+            left: 5rem;
+        }
+        @include responsive(medium) {
+            left: 4rem;
+        }
+        @include responsive(small) {
+            left: 2rem;
+        }
+        @include responsive(xsmall) {
+            left: 1.5rem;
+        }
         img {
             width: 15rem;
             height: auto;
             object-fit: cover;
             cursor: pointer;
+            @include responsive(small) {
+                width: 13rem;
+            }
+            @include responsive(xsmall) {
+                width: 10rem;
+            }
         }
     }
     &__video {
@@ -69,12 +87,12 @@
                     @include responsive(small) {
                         margin-top: 0.5rem;
                         font-size: 1.4rem;
-                        line-height: 1.8rem;
+                        line-height: 2rem;
                     }
                 }
                 &__link {
                     margin-top: 1rem;
-                    @include animation(headerButton, 1s, ease-out, 8rem, 0);
+                    @include animation(headerButton, 1s, ease-in, 8rem, 0);
                 }
             }
         }
