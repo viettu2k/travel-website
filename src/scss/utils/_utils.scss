@@ -3,6 +3,11 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 0px) and (max-width: 480px) {
+        max-width: 100%;
+        padding: 0 3rem;
+        background: orange;
+    }
 }
 
 .pr {
