@@ -1,3 +1,4 @@
+@use "breakpoints" as *;
 @mixin position($position, $top, $left, $bottom, $right, $width, $height) {
     position: $position;
     top: $top;
@@ -73,4 +74,19 @@
     border: 1px solid $color;
     height: $height;
     padding: $paddingy $paddingx;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint==large {
+        @media (max-width: $lg) {}
+    }
+    @if $breakpoint==medium {
+        @media (max-width: $md) {}
+    }
+    @if $breakpoint==small {
+        @media (max-width: $sm) {}
+    }
+    @if $breakpoint==xsmall {
+        @media (max-width: $xsm) {}
+    }
 }
