@@ -3,9 +3,13 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    @media (min-width: 0px) and (max-width: 480px) {
-        max-width: 100%;
-        padding: 0 3rem;
+    @include responsive(large) {
+        background: red;
+    }
+    @include responsive(medium) {
+        background: yellow;
+    }
+    @include responsive(small) {
         background: orange;
     }
 }
