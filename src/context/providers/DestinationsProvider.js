@@ -1,8 +1,9 @@
-import React, { useReducer } from "react";
-import DestinationsContext from "../DestinationsContext";
-import DestinationsReducer from "../reducers/DestinationsReducer";
-import { destinations } from "../../data/destinations";
-import Cities from "../../data/cities";
+import React, { useReducer } from 'react';
+
+import DestinationsContext from '../DestinationsContext';
+import DestinationsReducer from '../reducers/DestinationsReducer';
+import { destinations } from '../../data/destinations';
+import Cities from '../../data/cities';
 
 const DestinationsProvider = ({ children }) => {
   const [destinationsData, dispatch] = useReducer(DestinationsReducer, {

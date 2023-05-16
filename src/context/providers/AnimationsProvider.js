@@ -1,5 +1,6 @@
-import { useEffect } from "react";
-import AnimationsContext from "../AnimationsContext";
+import { useEffect } from 'react';
+
+import AnimationsContext from '../AnimationsContext';
 
 const AnimationsProvider = ({ children }) => {
   const scrollAnimations = () => {
@@ -15,13 +16,14 @@ const AnimationsProvider = ({ children }) => {
         }
       });
     };
-    const elements = document.querySelectorAll(".animation");
-    const headingElements = document.querySelectorAll(".headingAnimation");
-    animation(elements, "animate");
-    animation(headingElements, "headingAnimate");
+    const elements = document.querySelectorAll('.animation');
+    const headingElements = document.querySelectorAll('.headingAnimation');
+
+    animation(elements, 'animate');
+    animation(headingElements, 'headingAnimate');
   };
   useEffect(() => {
-    window.addEventListener("scroll", scrollAnimations);
+    window.addEventListener('scroll', scrollAnimations);
   }, []);
 
   return (

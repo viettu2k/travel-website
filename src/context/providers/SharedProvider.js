@@ -1,8 +1,9 @@
-import { useReducer } from "react";
-import SharedContext from "../SharedContext";
-import SharedReducer from "../reducers/SharedReducer";
-import services from "../../data/services";
-import reviews from "../../data/reviews";
+import { useReducer } from 'react';
+
+import SharedContext from '../SharedContext';
+import SharedReducer from '../reducers/SharedReducer';
+import services from '../../data/services';
+import reviews from '../../data/reviews';
 
 const SharedProvider = ({ children }) => {
   const [sharedData, dispatch] = useReducer(SharedReducer, {

@@ -1,11 +1,12 @@
-import React, { useReducer } from "react";
-import ModelContext from "../ModelContext";
-import ModelReducer from "../reducers/ModelReducer";
+import React, { useReducer } from 'react';
+
+import ModelContext from '../ModelContext';
+import ModelReducer from '../reducers/ModelReducer';
 
 const ModelProvider = ({ children }) => {
   const [state, dispatch] = useReducer(ModelReducer, {
     modelStatus: false,
-    current: "",
+    current: '',
   });
 
   return (

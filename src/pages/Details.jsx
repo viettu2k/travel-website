@@ -1,11 +1,12 @@
-import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import DestinationsContext from "../context/DestinationsContext";
-import { DETAILS, CITIES } from "../context/types/DestinationTypes";
-import Header from "../components/Header";
-import { Helmet } from "react-helmet-async";
-import DestinationInfo from "../components/destinations/DestinationInfo";
-import Cities from "../components/cities/Cities";
+import React, { useContext, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+import DestinationsContext from '../context/DestinationsContext';
+import { DETAILS, CITIES } from '../context/types/DestinationTypes';
+import Header from '../components/Header';
+import DestinationInfo from '../components/destinations/DestinationInfo';
+import Cities from '../components/cities/Cities';
 
 const Details = () => {
   const { destinationsData, dispatch } = useContext(DestinationsContext);

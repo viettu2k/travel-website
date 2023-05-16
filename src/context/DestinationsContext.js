@@ -1,4 +1,5 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
 const DestinationsContext = createContext();
+
 export default DestinationsContext;

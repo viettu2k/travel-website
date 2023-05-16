@@ -1,24 +1,24 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import NavContext from "../context/NavContext";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
+import NavContext from '../context/NavContext';
 
 const Nav = () => {
   const { state } = useContext(NavContext);
 
   return (
     <>
-      {state ? <div className="navLayer"></div> : ""}
-
-      <div className={state ? "nav nav--open" : "nav nav--close"}>
-        <div className="nav__content">
+      {state ? <div className='navLayer'></div> : ''}
+      <div className={state ? 'nav nav--open' : 'nav nav--close'}>
+        <div className='nav__content'>
           <li>
-            <Link to="/">Home</Link>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to='/about'>About</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to='/contact'>Contact</Link>
           </li>
         </div>
       </div>
@@ -26,4 +26,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default React.memo(Nav);

@@ -1,12 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const DestinationDetails = ({ title, text }) => {
-  return (
-    <div className="destinationInfo__details">
-      <div className="destinationInfo__details__head animation">{title}</div>
-      <div className="destinationInfo__details__text animation">{text}</div>
-    </div>
-  );
-};
+const DestinationDetails = ({ title, text }) => (
+  <div className='destinationInfo__details'>
+    <div className='destinationInfo__details__head animation'>{title}</div>
+    <div className='destinationInfo__details__text animation'>{text}</div>
+  </div>
+);
 
-export default DestinationDetails;
+export default React.memo(DestinationDetails);

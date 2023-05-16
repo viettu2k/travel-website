@@ -1,25 +1,23 @@
-import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const CityImage = ({ image, status }) => {
-  return (
-    <div className="cities__body__image">
-      <LazyLoadImage src={image} alt={image} />
-      <div
-        className={
-          status === "Bestselling"
-            ? "bestselling"
-            : status === "New"
-            ? "new"
-            : status === "Hot"
-            ? "hot"
-            : ""
-        }
-      >
-        {status}
-      </div>
+const CityImage = ({ image, status }) => (
+  <div className='cities__body__image'>
+    <LazyLoadImage src={image} alt={image} />
+    <div
+      className={
+        status === 'Bestselling'
+          ? 'bestselling'
+          : status === 'New'
+          ? 'new'
+          : status === 'Hot'
+          ? 'hot'
+          : ''
+      }
+    >
+      {status}
     </div>
-  );
-};
+  </div>
+);
 
-export default CityImage;
+export default React.memo(CityImage);

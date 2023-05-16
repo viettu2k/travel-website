@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import PageContainer from "../components/pages-parts/PageContainer";
-import Footer from "../components/footer/Footer";
-import AboutImage from "../components/pages-parts/AboutImage";
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function About() {
+import PageContainer from '../components/pages-parts/PageContainer';
+import Footer from '../components/footer/Footer';
+import AboutImage from '../components/pages-parts/AboutImage';
+
+const About = () => {
   const [state] = useState({
-    heading: "about us",
-    pageHeading: "world best travel agency company since 2005",
-    msg: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore porro vel consequuntur minus id quam in vitae saepe veniam. Alias, tempore distinctio laborum molestiae odio dicta corrupti quia debitis! Deserunt?",
+    heading: 'about us',
+    pageHeading: 'world best travel agency company since 2005',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore porro vel consequuntur minus id quam in vitae saepe veniam. Alias, tempore distinctio laborum molestiae odio dicta corrupti quia debitis! Deserunt?',
   });
 
   useEffect(() => {
@@ -19,7 +20,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About page</title>
-        <meta name="description" content="travel friends about page" />
+        <meta name='description' content='travel friends about page' />
       </Helmet>
       <PageContainer data={state}>
         <AboutImage />
@@ -27,4 +28,6 @@ export default function About() {
       <Footer />
     </>
   );
-}
+};
+
+export default About;

@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
-import ModelContext from "../context/ModelContext";
-import { OPEN_MODEL } from "../context/types/ModelTypes";
+import React, { useContext, useState } from 'react';
+
+import ModelContext from '../context/ModelContext';
+import { OPEN_MODEL } from '../context/types/ModelTypes';
 
 const Login = ({ currentModel }) => {
   const { dispatch } = useContext(ModelContext);
-
   const [state, setState] = useState({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
 
   const loginForm = (e) => {
@@ -16,31 +16,31 @@ const Login = ({ currentModel }) => {
 
   return (
     <form onSubmit={loginForm}>
-      <div className="model__heading">
+      <div className='model__heading'>
         <h3>Login</h3>
       </div>
-      <div className="group">
+      <div className='group'>
         <input
-          type="email"
-          name=""
-          className="group__control"
-          placeholder="Enter email"
+          type='email'
+          name=''
+          className='group__control'
+          placeholder='Enter email'
           onChange={(e) => setState({ ...state, email: e.target.value })}
           value={state.email}
         />
       </div>
-      <div className="group">
+      <div className='group'>
         <input
-          type="password"
-          name=""
-          className="group__control"
-          placeholder="Enter password"
+          type='password'
+          name=''
+          className='group__control'
+          placeholder='Enter password'
           onChange={(e) => setState({ ...state, password: e.target.value })}
           value={state.password}
         />
       </div>
-      <div className="group flex space-between y-center">
-        <input type="submit" name="" className="btn-dark " value="Login" />
+      <div className='group flex space-between y-center'>
+        <input type='submit' name='' className='btn-dark ' value='Login' />
         <span
           onClick={() => dispatch({ type: OPEN_MODEL, payload: currentModel })}
         >
@@ -51,4 +51,4 @@ const Login = ({ currentModel }) => {
   );
 };
 
-export default Login;
+export default React.memo(Login);

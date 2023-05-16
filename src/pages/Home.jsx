@@ -1,28 +1,28 @@
-import React, { useState, useContext, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import Header from "../components/Header";
-import Model from "../components/Model";
-import ModelContext from "../context/ModelContext";
-import { OPEN_MODEL } from "../context/types/ModelTypes";
-import Register from "../auth/Register";
-import Login from "../auth/Login";
-import Destinations from "../components/destinations/Destinations";
-import Services from "../components/services/Services";
-import Reviews from "../components/reviews/Reviews";
-import Gallery from "../components/gallery/Gallery";
-import Footer from "../components/footer/Footer";
+import React, { useState, useContext, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function Home() {
+import Header from '../components/Header';
+import Model from '../components/Model';
+import ModelContext from '../context/ModelContext';
+import { OPEN_MODEL } from '../context/types/ModelTypes';
+import Register from '../auth/Register';
+import Login from '../auth/Login';
+import Destinations from '../components/destinations/Destinations';
+import Services from '../components/services/Services';
+import Reviews from '../components/reviews/Reviews';
+import Gallery from '../components/gallery/Gallery';
+import Footer from '../components/footer/Footer';
+
+const Home = () => {
   const { dispatch } = useContext(ModelContext);
-
   const [state] = useState({
-    heading: "We are travel friends",
+    heading: 'We are travel friends',
     paragraph:
-      " Come and join us we travel the most famous and beautiful places in the worlds",
+      ' Come and join us we travel the most famous and beautiful places in the worlds',
   });
 
-  const [registerModel] = useState("registerModel");
-  const [loginModel] = useState("loginModel");
+  const [registerModel] = useState('registerModel');
+  const [loginModel] = useState('loginModel');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,15 +33,15 @@ export default function Home() {
       <Helmet>
         <title>Travel Friends</title>
         <meta
-          name="description"
-          content="Travel to the world with travel friends"
+          name='description'
+          content='Travel to the world with travel friends'
         />
-        <meta name="keywords" content="travel, travel tours, airline" />
+        <meta name='keywords' content='travel, travel tours, airline' />
       </Helmet>
       <Header heading={state.heading} paragraph={state.paragraph}>
         <button
           onClick={() => dispatch({ type: OPEN_MODEL, payload: registerModel })}
-          className="btn-default"
+          className='btn-default'
         >
           Get Started
         </button>
@@ -59,4 +59,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Home;
